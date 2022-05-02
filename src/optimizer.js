@@ -1,36 +1,40 @@
-import React, { useState, useRef } from 'react';
-import { ThemeProvider } from 'styled-components';
-import { useOnClickOutside } from './hooks';
-import { SubPage } from './subpage';
-import { theme } from './theme';
-import { Burger, Menu } from './components';
-import FocusLock from 'react-focus-lock';
-import Dashboarddata3 from './datalayout3';
-
+import React from 'react';
+import Cards from './Cards/Cards'
+import Logo from './images/Logo.png';
+import tatalogo from './images/tatalogo.png';
 
 
 
 function Optimizer()  {
-  const [open, setOpen] = useState(false);
-  const node = useRef();
-  const menuId = "main-menu";
-
-  useOnClickOutside(node, () => setOpen(false));
-
+  
   return (
+    <>
     
-      <>
-       <ThemeProvider theme={theme}>
-        <div ref={node}>
-          <FocusLock disabled={!open}>
-            <Burger open={open} setOpen={setOpen} aria-controls={menuId} />
-            <Menu open={open} setOpen={setOpen} id={menuId} />
-            
-          </FocusLock>
-        </div>
-        
-        </ThemeProvider>
-        <Dashboarddata3/>
+ <div class="App">
+		<div class="header">      
+    <ul class="nav">
+  <img class="Logo" src= {Logo} alt="pic" />
+<li><a  href="/">Home</a></li>
+<li> <a href="/Dashboard">DashBoard</a></li>
+<li><a href="/recommender/">Recommender</a></li>
+<li><a class="active" href="/optimizer/">Optimizer</a> </li>
+  
+</ul>
+ 
+</div>
+
+   
+    <div class="footer">
+    <img class="footerlogo" src= {tatalogo} alt="pic" />
+    <div class="footertext">© Copyright 2022 | Tata Consultancy Services</div>
+    <ul class="footernav">
+   < a href="/">Help</a>
+  <a href="/">Contact Us</a>
+
+    </ul>
+    </div>
+    </div>
+    
       </>
     
 

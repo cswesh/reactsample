@@ -1,6 +1,7 @@
 import React from 'react';
 import { bool } from 'prop-types';
 import { StyledMenu } from './Menu.styled';
+import { Link , NavLink } from 'react-router-dom'
 
 const Menu = ({ open, ...props }) => {
   
@@ -9,7 +10,11 @@ const Menu = ({ open, ...props }) => {
 
   return (
     <StyledMenu open={open} aria-hidden={!isHidden} {...props}>
-      <a href="./analyser" tabIndex={tabIndex}>
+     <a href="/" tabIndex={tabIndex}>
+        <span aria-hidden="true"></span>
+        Home
+      </a>
+      <a href="/analyser" tabIndex={tabIndex}>
         <span aria-hidden="true"></span>
         M365 Analyser
       </a>
@@ -21,6 +26,8 @@ const Menu = ({ open, ...props }) => {
         <span aria-hidden="true"></span>
         Optimizer
         </a>
+
+    
     </StyledMenu>
   )
 }

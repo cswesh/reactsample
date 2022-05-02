@@ -1,0 +1,104 @@
+.CompactCard{
+    display: flex;
+    height: 150px;
+   width: 300px;
+    border-radius: 8.24102px;
+    color:#fff;
+    background: #FFFFFF;
+    position: absolute;
+    cursor:pointer;
+    padding: 1rem;
+    box-shadow: 0px 4.120509624481201px 4.120509624481201px 0px #00000033;
+   
+}
+.CompactCard:hover{
+    box-shadow: none !important;
+}
+/* radial bar */
+.radialBar{
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:1rem;
+    color: #252733;
+    font-family: 'Arial';
+font-style: normal;
+line-height: 21px;
+letter-spacing: 0.412051px;
+margin-left: 15px;
+}
+.CircularProgressbar{
+    
+    width: 4rem !important;
+    overflow: visible;
+    margin-left: 80px;
+    
+}
+.CircularProgressbar-path{
+    stroke: #5F5F5F !important;
+    stroke-width: 12px !important;
+    filter:drop-shadow(2px 4px 6px #5F5F5F)
+}
+.CircularProgressbar-trail{
+    display: none;
+}
+.CircularProgressbar-text{
+    fill:  #5F5F5F !important;
+}
+.radialBar>span{
+    font-weight: 400;
+font-size: 18px;
+}
+
+
+.ExpandedCard{
+    position: absolute;
+    height: 435px;
+width: 600px;
+border-radius: 8.241019248962402px;
+z-index: 9;
+    left: 30rem;
+    box-shadow: 0px 4.12051px 4.12051px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background: #FFFFFF;
+
+}
+
+.ExpandedCard>span:nth-of-type(1){
+color: #252733;
+font-family: 'Arial';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 21px;
+letter-spacing: 0.412051px;
+    
+}
+.ExpandedCard>span:nth-of-type(2){
+    color:#252733;
+    font-size: 14px;
+}
+.chartContainer{
+    width: 70%;
+}
+
+@media screen and (max-width: 1200px){
+    .ExpandedCard{
+        top: 2rem;
+        height: 70vh;
+        left: 6rem;
+    }
+}
+@media screen and (max-width: 768px){
+    .ExpandedCard{
+        top: 8rem;
+        height: 50%;
+        left: 15px;
+        width: 80%;
+    }
+}
